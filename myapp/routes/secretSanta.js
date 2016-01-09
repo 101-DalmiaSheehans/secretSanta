@@ -8,7 +8,8 @@ module.exports = {
 		getSecretSanta : function ( fileName )
 		{
 			var result = [] ;
-			var fileData = fs.readFileSync(fileName)
+			filepath = __dirname +'/' + fileName;
+			var fileData = fs.readFileSync(filepath)
 			var fileContent = fileData.toString();
 			var santas = fileContent.split( '\n').filter( function( element ) {
 				return element != "";
